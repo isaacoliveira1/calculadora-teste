@@ -1491,9 +1491,9 @@
 			+"\n* DATA: "+ today.getDate() +"/" + mes + "/" + today.getFullYear()
 			+"```"
 			}
-			console.log($("#foto")[0].src);
+	
 			try {
-				data = await fetch($("#foto").src);
+				data = await fetch($("#foto")[0].src);
     			blob = await data.blob();
 				navigator.clipboard.writeText([
        		new ClipboardItem({
