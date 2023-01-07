@@ -1494,12 +1494,12 @@
 	
 			try {
 				data = await fetch($("#foto")[0].src);
-    			blob = await data.blob();
-				navigator.clipboard.writeText([
-       		new ClipboardItem({
+    				blob = await data.blob();
+				navigator.clipboard.write([
+       				new ClipboardItem({
 				[blob.type]: blob,
 		      	  })
-					]);
+			]);
 		}
 			catch (error) {
 			console.error(error);
